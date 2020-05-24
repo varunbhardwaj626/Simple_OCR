@@ -22,4 +22,4 @@ Note - If the GUI doesn't show you try installing specified packages or contact 
 
 2)	The model is trained on IAM dataset which consists of writing done using thick ink and thereby the model has accuracy based on that.
 
-3)	3)	The model has low accuracy over real-world data due to lack of trainable dataset and non-availability of powerful machine required to train more accurate data.
+3)	The model has low accuracy over real-world data due to lack of trainable dataset and non-availability of powerful machine required to train more accurate data.
