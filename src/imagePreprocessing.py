@@ -27,7 +27,7 @@ def get_contours(img):
     # Get contours but first invert the colors for efficiency
     
     ret, th = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY_INV)
-    contours, hierarchy = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, hierarchy = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     return contours
 
 
@@ -120,6 +120,15 @@ def get_word_list(img):
 
     return final_list
     
+
+def preProcess(im):
+
+    img = cv2.imread(im, 0)
+    # frame = img.copy()
+    finallt = get_word_list(img)
+    # cv2.waitKey()
+    return finallt
+
 
 if __name__ == "__main__":
 
