@@ -81,7 +81,9 @@ def join_contours_of_same_words(mainlt, avgheight):
     # Returns combined frame coordinate list
 
     finallt = list()
+    
     for elmm in mainlt:
+        flag = 0
         for i in range(len(elmm)-1):
             flag = 0
             a, b, c, d = elmm[i]

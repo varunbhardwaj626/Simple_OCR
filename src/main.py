@@ -118,8 +118,11 @@ while True:
         filename = values['browse']
 
         try:
-            window['image'].Update(filename=filename)
-            window['image'].set_size(size=(450, 300))
+            im=cv2.imread(filename)
+            im=cv2.resize(im, (300, 300)) 
+            cv2.imwrite('intemediate.png',im)
+            window['image'].Update('intemediate.png')
+          
         except:
             print('CAN\'T PUT THE IMAGE ON CANVAS')
         arr = preProcess(filename)
